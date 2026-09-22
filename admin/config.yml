@@ -8,6 +8,19 @@ public_folder: "/images/uploads"
 locale: "es"
 
 collections:
+  - name: "configuracion"
+    label: "Configuración del mapa"
+    files:
+      - file: "content/settings.json"
+        label: "Fondo del mapa"
+        name: "settings"
+        fields:
+          - label: "Imagen de fondo (satelital o la que prefieras)"
+            name: "background_image"
+            widget: "image"
+            required: false
+            hint: "Sube una captura tipo satélite/aérea de Las Lomas. Déjalo vacío para usar el diseño ilustrado con lomas verdes."
+
   - name: "comunidades"
     label: "Comunidades de Las Lomas"
     files:
