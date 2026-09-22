@@ -7,13 +7,27 @@
       "y": 11,
       "intro": "Espacio para la descripción de Loma Bonita: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
-        { "name": "Lugar turístico 1", "desc": "Descripción breve pendiente de agregar." },
-        { "name": "Lugar turístico 2", "desc": "Descripción breve pendiente de agregar." }
+        {
+          "name": "Lugar turístico 1",
+          "desc": "Descripción breve pendiente de agregar."
+        },
+        {
+          "name": "Lugar turístico 2",
+          "desc": "Descripción breve pendiente de agregar."
+        }
       ],
-      "photos": [],
+      "photos": [
+        "/images/uploads/descarga.jpg"
+      ],
       "links": [
-        { "label": "Facebook de la comunidad", "url": "#" },
-        { "label": "Ubicación en Google Maps", "url": "#" }
+        {
+          "label": "Facebook de la comunidad",
+          "url": "#"
+        },
+        {
+          "label": "Ubicación en Google Maps",
+          "url": "#"
+        }
       ]
     },
     {
@@ -23,13 +37,25 @@
       "y": 30,
       "intro": "Espacio para la descripción de Trinidad: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
-        { "name": "Lugar turístico 1", "desc": "Descripción breve pendiente de agregar." },
-        { "name": "Lugar turístico 2", "desc": "Descripción breve pendiente de agregar." }
+        {
+          "name": "Lugar turístico 1",
+          "desc": "Descripción breve pendiente de agregar."
+        },
+        {
+          "name": "Lugar turístico 2",
+          "desc": "Descripción breve pendiente de agregar."
+        }
       ],
       "photos": [],
       "links": [
-        { "label": "Facebook de la comunidad", "url": "#" },
-        { "label": "Ubicación en Google Maps", "url": "#" }
+        {
+          "label": "Facebook de la comunidad",
+          "url": "#"
+        },
+        {
+          "label": "Ubicación en Google Maps",
+          "url": "#"
+        }
       ]
     },
     {
@@ -39,13 +65,25 @@
       "y": 51,
       "intro": "Espacio para la descripción de Calabazo: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
-        { "name": "Lugar turístico 1", "desc": "Descripción breve pendiente de agregar." },
-        { "name": "Lugar turístico 2", "desc": "Descripción breve pendiente de agregar." }
+        {
+          "name": "Lugar turístico 1",
+          "desc": "Descripción breve pendiente de agregar."
+        },
+        {
+          "name": "Lugar turístico 2",
+          "desc": "Descripción breve pendiente de agregar."
+        }
       ],
       "photos": [],
       "links": [
-        { "label": "Facebook de la comunidad", "url": "#" },
-        { "label": "Ubicación en Google Maps", "url": "#" }
+        {
+          "label": "Facebook de la comunidad",
+          "url": "#"
+        },
+        {
+          "label": "Ubicación en Google Maps",
+          "url": "#"
+        }
       ]
     },
     {
@@ -55,13 +93,25 @@
       "y": 72,
       "intro": "Espacio para la descripción de Ojo de Agua: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
-        { "name": "Lugar turístico 1", "desc": "Descripción breve pendiente de agregar." },
-        { "name": "Lugar turístico 2", "desc": "Descripción breve pendiente de agregar." }
+        {
+          "name": "Lugar turístico 1",
+          "desc": "Descripción breve pendiente de agregar."
+        },
+        {
+          "name": "Lugar turístico 2",
+          "desc": "Descripción breve pendiente de agregar."
+        }
       ],
       "photos": [],
       "links": [
-        { "label": "Facebook de la comunidad", "url": "#" },
-        { "label": "Ubicación en Google Maps", "url": "#" }
+        {
+          "label": "Facebook de la comunidad",
+          "url": "#"
+        },
+        {
+          "label": "Ubicación en Google Maps",
+          "url": "#"
+        }
       ]
     },
     {
@@ -71,15 +121,33 @@
       "y": 91,
       "intro": "Bajo Grande es la última parada del recorrido. Este es el espacio de ejemplo: aquí puedes escribir un poco de su historia, cómo llegar, y qué encuentran los visitantes.",
       "spots": [
-        { "name": "Mirador / lugar turístico 1", "desc": "Reemplaza este texto con la descripción real del lugar." },
-        { "name": "Lugar turístico 2", "desc": "Reemplaza este texto con la descripción real del lugar." },
-        { "name": "Lugar turístico 3", "desc": "Reemplaza este texto con la descripción real del lugar." }
+        {
+          "name": "Mirador / lugar turístico 1",
+          "desc": "Reemplaza este texto con la descripción real del lugar."
+        },
+        {
+          "name": "Lugar turístico 2",
+          "desc": "Reemplaza este texto con la descripción real del lugar."
+        },
+        {
+          "name": "Lugar turístico 3",
+          "desc": "Reemplaza este texto con la descripción real del lugar."
+        }
       ],
       "photos": [],
       "links": [
-        { "label": "Facebook de la comunidad", "url": "#" },
-        { "label": "WhatsApp / contacto local", "url": "#" },
-        { "label": "Ubicación en Google Maps", "url": "#" }
+        {
+          "label": "Facebook de la comunidad",
+          "url": "#"
+        },
+        {
+          "label": "WhatsApp / contacto local",
+          "url": "#"
+        },
+        {
+          "label": "Ubicación en Google Maps",
+          "url": "#"
+        }
       ]
     }
   ]
