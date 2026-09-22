@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Corregimiento Las Lomas — Mapa de comunidades</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+  :root{
+    --bg:#F1EAD6;
+    --bg-panel:#FBF7EC;
+    --hill-1:#8FAE79;
+    --hill-2:#6B8F5A;
+    --hill-3:#4E6E45;
+    --trail:#B5652E;
+    --trail-dark:#8A4A20;
+    --pin:#C1682B;
+    --pin-active:#E3A93C;
+    --ink:#332A1E;
+    --ink-soft:#5B4E3C;
+    --line:rgba(51,42,30,0.18);
+    --shadow: 0 10px 30px rgba(51,42,30,0.18);
+    box-sizing:border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1E2A19;
+      --bg-panel:#2A3620;
+      --hill-1:#3E5230;
+      --hill-2:#31431F;
+      --hill-3:#26361A;
+      --trail:#D68A45;
+      --trail-dark:#B5652E;
+      --pin:#E3A93C;
+      --pin-active:#F3C55C;
+      --ink:#F1EAD6;
+      --ink-soft:#CFC6AC;
+      --line:rgba(241,234,214,0.18);
+      --shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1E2A19;
+    --bg-panel:#2A3620;
+    --hill-1:#3E5230;
+    --hill-2:#31431F;
+    --hill-3:#26361A;
+    --trail:#D68A45;
+    --trail-dark:#B5652E;
+    --pin:#E3A93C;
+    --pin-active:#F3C55C;
+    --ink:#F1EAD6;
+    --ink-soft:#CFC6AC;
+    --line:rgba(241,234,214,0.18);
+    --shadow: 0 10px 30px rgba(0,0,0,0.4);
+  }
+  html{scroll-padding-top: env(safe-area-inset-top, 0px);}
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Karla', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  header{
+    padding: calc(2.4rem + env(safe-area-inset-top,0px)) 1.5rem 1.4rem;
+    text-align:center;
+  }
+  header h1{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    margin:0 0 0.3rem;
+    letter-spacing: -0.01em;
+  }
+  header p{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:1rem;
+    max-width:32em;
+    margin-inline:auto;
+  }
+  .map-wrap{
+    position:relative;
+    max-width:640px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+  }
+  svg.trail-bg{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  .pin-layer{
+    position:absolute;
+    inset:0;
+  }
+  .pin{
+    position:absolute;
+    transform:translate(-50%,-100%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.35rem;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:0;
+    font-family:'Karla', sans-serif;
+  }
+  .pin-dot{
+    width:34px;
+    height:34px;
+    border-radius:50% 50% 50% 0;
+    background:var(--pin);
+    transform:rotate(-45deg);
+    box-shadow: var(--shadow);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: transform 0.18s ease, background 0.18s ease;
+  }
+  .pin-dot::after{
+    content:"";
+    width:11px;
+    height:11px;
+    border-radius:50%;
+    background: var(--bg-panel);
+    transform:rotate(45deg);
+  }
+  .pin:hover .pin-dot, .pin:focus-visible .pin-dot, .pin[aria-pressed="true"] .pin-dot{
+    background:var(--pin-active);
+    transform:rotate(-45deg) scale(1.12);
+  }
+  .pin-label{
+    font-weight:700;
+    font-size:0.82rem;
+    color:var(--ink);
+    background:var(--bg-panel);
+    padding:0.2rem 0.6rem;
+    border-radius:999px;
+    white-space:nowrap;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  }
+  .pin:focus-visible{ outline: 3px solid var(--pin-active); outline-offset:4px; border-radius:8px;}
+
+  /* Panel */
+  .overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(20,16,10,0.45);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 0.22s ease;
+    z-index:20;
+  }
+  .overlay.open{ opacity:1; pointer-events:auto; }
+  .panel{
+    position:fixed;
+    z-index:21;
+    background:var(--bg-panel);
+    color:var(--ink);
+    box-shadow: var(--shadow);
+    overflow-y:auto;
+    padding: calc(1.4rem + env(safe-area-inset-top,0px)) 1.4rem calc(1.8rem + env(safe-area-inset-bottom,0px));
+    transition: transform 0.28s cubic-bezier(.32,.72,0,1);
+  }
+  /* mobile: bottom sheet */
+  .panel{
+    left:0; right:0; bottom:0;
+    top:12%;
+    border-radius:22px 22px 0 0;
+    transform:translateY(100%);
+  }
+  .overlay.open .panel{ transform:translateY(0); }
+  @media (min-width:760px){
+    .panel{
+      top:0; bottom:0; right:0; left:auto;
+      width:420px;
+      border-radius:0;
+      transform:translateX(100%);
+    }
+    .overlay.open .panel{ transform:translateX(0); }
+  }
+  .panel-close{
+    position:sticky;
+    top:0;
+    float:right;
+    background:transparent;
+    border:none;
+    font-size:1.6rem;
+    line-height:1;
+    color:var(--ink-soft);
+    cursor:pointer;
+    padding:0.2rem 0.4rem;
+  }
+  .panel h2{
+    font-family:'Fraunces', serif;
+    font-size:1.7rem;
+    margin: 0 0 0.2rem;
+    clear:both;
+  }
+  .panel .kicker{
+    color:var(--ink-soft);
+    font-size:0.85rem;
+    margin:0 0 1rem;
+  }
+  .panel section{ margin-bottom:1.6rem; }
+  .panel h3{
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+    margin:0 0 0.6rem;
+    font-weight:700;
+  }
+  .panel p{ margin:0 0 0.6rem; line-height:1.5; color:var(--ink); }
+  .spot-list{ list-style:none; margin:0; padding:0; }
+  .spot-list li{
+    padding:0.55rem 0;
+    border-top:1px solid var(--line);
+    font-size:0.95rem;
+  }
+  .spot-list li:first-child{ border-top:none; }
+  .gallery{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:0.5rem;
+  }
+  .photo-slot{
+    aspect-ratio:1;
+    border-radius:10px;
+    border:1.5px dashed var(--line);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:0.25rem;
+    color:var(--ink-soft);
+    font-size:0.68rem;
+    text-align:center;
+    padding:0.3rem;
+    background: color-mix(in srgb, var(--bg) 60%, transparent);
+  }
+  .photo-slot svg{ width:22px; height:22px; opacity:0.6; }
+  .link-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.5rem; }
+  .link-list a{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    color:var(--trail-dark);
+    text-decoration:none;
+    font-weight:700;
+    font-size:0.92rem;
+    padding:0.55rem 0.8rem;
+    border:1.5px solid var(--line);
+    border-radius:10px;
+  }
+  .link-list a:hover{ border-color:var(--trail); }
+  footer{
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:0.82rem;
+    padding: 1rem 1.5rem calc(2rem + env(safe-area-inset-bottom,0px));
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Las Lomas, un recorrido por sus comunidades</h1>
+  <p>Toca cada punto del camino para conocer los lugares turísticos, fotos y enlaces de cada comunidad, desde Loma Bonita hasta Bajo Grande.</p>
+</header>
+
+<div class="map-wrap">
+  <svg class="trail-bg" viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="0" y="0" width="400" height="620" fill="none"/>
+    <!-- hills -->
+    <path d="M-10,90 Q80,40 180,85 T410,70 V0 H-10 Z" fill="var(--hill-1)" opacity="0.55"/>
+    <path d="M-10,220 Q100,160 200,215 T410,195 V90 Q300,60 200,110 T-10,120 Z" fill="var(--hill-2)" opacity="0.5"/>
+    <path d="M-10,620 V330 Q90,280 190,335 T410,320 V620 Z" fill="var(--hill-3)" opacity="0.45"/>
+    <path d="M-10,620 V430 Q120,390 210,440 T410,430 V620 Z" fill="var(--hill-2)" opacity="0.6"/>
+    <!-- trail path -->
+    <path d="M200,68 C212,88 274,145 272,186 C270,227 190,273 188,316 C186,360 258,405 260,446 C262,488 210,545 200,564"
+          fill="none" stroke="var(--trail)" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 16"/>
+  </svg>
+
+  <div class="pin-layer" id="pinLayer"></div>
+</div>
+
+<footer>Mapa turístico del corregimiento Las Lomas · hecho a mano, foto a foto.</footer>
+
+<div class="overlay" id="overlay">
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
+    <button class="panel-close" id="panelClose" aria-label="Cerrar">×</button>
+    <p class="kicker" id="panelKicker">Comunidad</p>
+    <h2 id="panelTitle">—</h2>
+
+    <section>
+      <h3>Sobre la comunidad</h3>
+      <p id="panelIntro">—</p>
+    </section>
+
+    <section>
+      <h3>Lugares turísticos</h3>
+      <ul class="spot-list" id="panelSpots"></ul>
+    </section>
+
+    <section>
+      <h3>Fotos</h3>
+      <div class="gallery" id="panelGallery"></div>
+    </section>
+
+    <section>
+      <h3>Enlaces</h3>
+      <ul class="link-list" id="panelLinks"></ul>
+    </section>
+  </div>
+</div>
+
+<script>
+/* =========================================================================
+   Los datos de cada comunidad ahora viven en content/communities.json
+   Ese archivo se edita desde /admin (Decap CMS) — no hace falta tocar
+   este archivo para actualizar textos, fotos o enlaces.
+   ========================================================================= */
+let communities = [];
+
+const pinLayer = document.getElementById('pinLayer');
+const overlay = document.getElementById('overlay');
+const panelClose = document.getElementById('panelClose');
+
+const cameraIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.2"/></svg>`;
+
+function renderPins(){
+  pinLayer.innerHTML = communities.map((c, i) => `
+    <button class="pin" style="left:${c.x}%; top:${c.y}%;" data-id="${c.id}" aria-pressed="false" aria-label="Ver ${c.name}">
+      <span class="pin-label">${c.name}</span>
+      <span class="pin-dot"></span>
+    </button>
+  `).join('');
+}
+
+function renderGallery(photos){
+  const list = photos || [];
+  const minSlots = 3;
+  let html = list.map(src => `<img class="photo-slot" style="border:none;object-fit:cover;" src="${src}" alt="">`).join('');
+  for(let i = list.length; i < minSlots; i++){
+    html += `<div class="photo-slot">${cameraIcon}<span>Foto ${i+1}<br>pendiente</span></div>`;
+  }
+  return html;
+}
+
+function openPanel(community){
+  document.getElementById('panelKicker').textContent = 'Comunidad de Las Lomas';
+  document.getElementById('panelTitle').textContent = community.name;
+  document.getElementById('panelIntro').textContent = community.intro;
+  document.getElementById('panelSpots').innerHTML = community.spots.map(s =>
+    `<li><strong>${s.name}</strong><br>${s.desc}</li>`
+  ).join('');
+  document.getElementById('panelGallery').innerHTML = renderGallery(community.photos);
+  document.getElementById('panelGallery').style.gridTemplateColumns = 'repeat(3, 1fr)';
+  document.getElementById('panelLinks').innerHTML = community.links.map(l =>
+    `<a href="${l.url}" target="_blank" rel="noopener">${l.label}</a>`
+  ).join('');
+
+  document.querySelectorAll('.pin').forEach(p => p.setAttribute('aria-pressed', p.dataset.id === community.id ? 'true' : 'false'));
+  overlay.classList.add('open');
+}
+
+function closePanel(){
+  overlay.classList.remove('open');
+  document.querySelectorAll('.pin').forEach(p => p.setAttribute('aria-pressed','false'));
+}
+
+fetch('content/communities.json')
+  .then(r => r.json())
+  .then(data => {
+    communities = data.communities || [];
+    renderPins();
+  })
+  .catch(() => {
+    pinLayer.innerHTML = '<p style="text-align:center;color:var(--ink-soft);">No se pudo cargar la información de las comunidades.</p>';
+  });
+
+pinLayer.addEventListener('click', (e) => {
+  const btn = e.target.closest('.pin');
+  if(!btn) return;
+  const community = communities.find(c => c.id === btn.dataset.id);
+  if(community) openPanel(community);
+});
+
+panelClose.addEventListener('click', closePanel);
+overlay.addEventListener('click', (e) => { if(e.target === overlay) closePanel(); });
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closePanel(); });
+</script>
+</body>
+</html>
