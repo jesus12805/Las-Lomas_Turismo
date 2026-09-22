@@ -94,6 +94,13 @@
     margin: 0 auto 3rem;
     padding: 0 1rem;
   }
+  .map-wrap.has-photo svg.trail-bg{
+    border-radius:16px;
+    box-shadow: var(--shadow);
+  }
+  .map-wrap.has-photo svg.trail-bg image{
+    border-radius:16px;
+  }
   svg.trail-bg{
     display:block;
     width:100%;
@@ -280,14 +287,20 @@
   <p>Toca cada punto del camino para conocer los lugares turísticos, fotos y enlaces de cada comunidad, desde Loma Bonita hasta Bajo Grande.</p>
 </header>
 
-<div class="map-wrap">
+<div class="map-wrap" id="mapWrap">
   <svg class="trail-bg" viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="0" y="0" width="400" height="620" fill="none"/>
-    <!-- hills -->
-    <path d="M-10,90 Q80,40 180,85 T410,70 V0 H-10 Z" fill="var(--hill-1)" opacity="0.55"/>
-    <path d="M-10,220 Q100,160 200,215 T410,195 V90 Q300,60 200,110 T-10,120 Z" fill="var(--hill-2)" opacity="0.5"/>
-    <path d="M-10,620 V330 Q90,280 190,335 T410,320 V620 Z" fill="var(--hill-3)" opacity="0.45"/>
-    <path d="M-10,620 V430 Q120,390 210,440 T410,430 V620 Z" fill="var(--hill-2)" opacity="0.6"/>
+    <!-- foto de fondo (se llena desde el editor si existe) -->
+    <image id="bgPhoto" x="0" y="0" width="400" height="620" preserveAspectRatio="xMidYMid slice" href="" style="display:none;"/>
+    <!-- hills (se ocultan si hay foto de fondo) -->
+    <g id="hillsGroup">
+      <path d="M-10,90 Q80,40 180,85 T410,70 V0 H-10 Z" fill="var(--hill-1)" opacity="0.55"/>
+      <path d="M-10,220 Q100,160 200,215 T410,195 V90 Q300,60 200,110 T-10,120 Z" fill="var(--hill-2)" opacity="0.5"/>
+      <path d="M-10,620 V330 Q90,280 190,335 T410,320 V620 Z" fill="var(--hill-3)" opacity="0.45"/>
+      <path d="M-10,620 V430 Q120,390 210,440 T410,430 V620 Z" fill="var(--hill-2)" opacity="0.6"/>
+    </g>
+    <!-- capa oscura para legibilidad sobre foto de fondo -->
+    <rect id="photoScrim" x="0" y="0" width="400" height="620" fill="#1a1208" opacity="0" />
     <!-- trail path -->
     <path d="M200,68 C212,88 274,145 272,186 C270,227 190,273 188,316 C186,360 258,405 260,446 C262,488 210,545 200,564"
           fill="none" stroke="var(--trail)" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 16"/>
@@ -295,8 +308,6 @@
 
   <div class="pin-layer" id="pinLayer"></div>
 </div>
-
-<footer></footer>
 
 <div class="overlay" id="overlay">
   <div class="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
@@ -390,6 +401,20 @@ fetch('content/communities.json')
   .catch(() => {
     pinLayer.innerHTML = '<p style="text-align:center;color:var(--ink-soft);">No se pudo cargar la información de las comunidades.</p>';
   });
+
+fetch('content/settings.json')
+  .then(r => r.json())
+  .then(settings => {
+    const bg = settings.background_image;
+    if (bg) {
+      document.getElementById('bgPhoto').setAttribute('href', bg);
+      document.getElementById('bgPhoto').style.display = 'block';
+      document.getElementById('hillsGroup').style.display = 'none';
+      document.getElementById('photoScrim').setAttribute('opacity', '0.18');
+      document.getElementById('mapWrap').classList.add('has-photo');
+    }
+  })
+  .catch(() => { /* si no existe el archivo, se queda con el fondo ilustrado */ });
 
 pinLayer.addEventListener('click', (e) => {
   const btn = e.target.closest('.pin');
