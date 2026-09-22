@@ -5,29 +5,23 @@
       "name": "Loma Bonita",
       "x": 50,
       "y": 11,
-      "intro": "Espacio para la descripción de Loma Bonita: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
+      "intro": "Loma Bonita es una comunidad ubicada al este del corregimiento de las lomas, distrito de la pintada, Cocle, en una zona montañosa de aproximadamente 550 m sobre el nivel del mar. Su historia esta ligada a un antiguo paraje cubierto de hierba desde donde se podia contemplar el paisaje a lo lejos, se le conocia como Alto de Loma bonita. se distingue por sus hermosos paisaje, sus tradiciones y la hospitalidad de sus habitantes.",
       "spots": [
         {
-          "name": "Lugar turístico 1",
-          "desc": "Descripción breve pendiente de agregar."
-        },
-        {
-          "name": "Lugar turístico 2",
-          "desc": "Descripción breve pendiente de agregar."
+          "name": "Piedra El Caracol",
+          "desc": "La piedra El Caracol es una formacion rocosa natural que destaca por presentar una figura en espiral, semejante a la concha de un caracol, que según la historia local podrian corresponder a petroglifos realizados por antiguos habitantes de la región."
         }
       ],
       "photos": [
-        "/images/uploads/images-1-.jpg",
-        "/images/uploads/images.jpg"
+        "/images/uploads/img_3234.heic",
+        "/images/uploads/img_3230.heic",
+        "/images/uploads/img_3223.heic",
+        "/images/uploads/img_3222.heic"
       ],
       "links": [
         {
-          "label": "Facebook de la comunidad",
-          "url": "#"
-        },
-        {
           "label": "Ubicación en Google Maps",
-          "url": "#"
+          "url": "https://maps.app.goo.gl/o3Tz7mxVjcVxrbBC8?g_st=aw"
         }
       ]
     },
@@ -36,7 +30,7 @@
       "name": "Trinidad",
       "x": 68,
       "y": 30,
-      "intro": "Espacio para la descripción de Trinidad: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
+      "intro": "La comunidad de Trinidad destaca por su entorno natural y su vida comunitaria, entre caminos rurales, montañas y espacios verdes. Es un lugar que invita a descubrir la tranquilidad del campo, disfrutar de sus paisajes y conocer las costumbres de quienes habitan esta hermosa comunidad.",
       "spots": [
         {
           "name": "Lugar turístico 1",
@@ -49,10 +43,6 @@
       ],
       "photos": [],
       "links": [
-        {
-          "label": "Facebook de la comunidad",
-          "url": "#"
-        },
         {
           "label": "Ubicación en Google Maps",
           "url": "#"
@@ -60,11 +50,30 @@
       ]
     },
     {
+      "id": "La-mina",
+      "name": "La Mina",
+      "x": 60,
+      "y": 76,
+      "intro": "La Mina es una comunidad rodeada de naturaleza y tranquilidad donde se conservan paisajes rurales y tradiciones propias de la región. Su entorno natural y la calidez de sus habitantes la convierten en un lugar especial para conocer y disfrutar. ",
+      "spots": [
+        {
+          "name": "La mina",
+          "desc": "Un paisaje lleno de montañas, extensas llanuras, rios cristalinos y hermosos atardecereds que reflejan la belleza natural de la comunidad. un lugar ideal para conectar con la tranquilidad y disfrutar de los paisajes que ofrece la naturaleza."
+        }
+      ],
+      "photos": [
+        "/images/uploads/whatsapp-image-2026-09-22-at-11.53.33-am.jpeg",
+        "/images/uploads/whatsapp-image-2026-09-22-at-12.03.17-pm.jpeg",
+        "/images/uploads/whatsapp-image-2026-09-22-at-12.04.00-pm.jpeg",
+        "/images/uploads/whatsapp-image-2026-09-22-at-12.04.36-pm.jpeg"
+      ]
+    },
+    {
       "id": "calabazo",
       "name": "Calabazo",
       "x": 47,
       "y": 51,
-      "intro": "Espacio para la descripción de Calabazo: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
+      "intro": "Calabazo es una comunidad que conserva el encanto de la vida campesina. Su nombre y su historia forman parte de las tradiciones transmitidas entre generaciones, mientras sus caminos, montañas  y espacios naturales reflejan la conexión de sus habitantes con la tierra. Su historia esta ligada al trabajo de la tierra y a las familias que han construidos la comunidad a través de los años.",
       "spots": [
         {
           "name": "Lugar turístico 1",
@@ -77,10 +86,6 @@
       ],
       "photos": [],
       "links": [
-        {
-          "label": "Facebook de la comunidad",
-          "url": "#"
-        },
         {
           "label": "Ubicación en Google Maps",
           "url": "#"
@@ -92,23 +97,22 @@
       "name": "Ojo de Agua",
       "x": 65,
       "y": 72,
-      "intro": "Espacio para la descripción de Ojo de Agua: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
+      "intro": "Ojo de agua es un lugar donde la naturaleza cobra vida entre nacimientos de agua, paisajes verdes y la tranquilidad del campo. su nombre hace referencia a las fuentes naturales que han acompañado a la comunidad a lo largo del tiempo. Es un espacio ideal para disfrutar del paisaje, cocnocer la vida rural y descubrir la belleza natural de Las Lomas.",
       "spots": [
         {
-          "name": "Lugar turístico 1",
-          "desc": "Descripción breve pendiente de agregar."
+          "name": "Chorro Grande",
+          "desc": "El chorro grande de Ojo de Agua es un hermoso atractivo natural rodeado de vegetacion y tranquilidad. sus aguas cristalinas caen entre las rocas formando un espacio refrescante, ideal para disfrutar de un bañ, conectar con la naturaleza y vivir una experiencia auténtica en el corazon de la comunidad."
         },
         {
           "name": "Lugar turístico 2",
           "desc": "Descripción breve pendiente de agregar."
         }
       ],
-      "photos": [],
+      "photos": [
+        "/images/uploads/whatsapp-image-2026-09-22-at-1.11.39-pm.jpeg",
+        "/images/uploads/whatsapp-image-2026-09-22-at-1.11.44-pm.jpeg"
+      ],
       "links": [
-        {
-          "label": "Facebook de la comunidad",
-          "url": "#"
-        },
         {
           "label": "Ubicación en Google Maps",
           "url": "#"
@@ -120,31 +124,26 @@
       "name": "Bajo Grande",
       "x": 50,
       "y": 91,
-      "intro": "Bajo Grande es la última parada del recorrido. Este es el espacio de ejemplo: aquí puedes escribir un poco de su historia, cómo llegar, y qué encuentran los visitantes.",
+      "intro": "Bajo Grande es la ultima comunidad del corregimiento de Las Lomas, rodeada de naturaleza, áreas verdes y paisajes propios de la vida rural. forma parte de la historia y el crecimiento de las Lomas, un territorio donde sus habitantes han conservado sus tradiciones y costumbres, destacando la celebracion de la virgen de Fátima. Es un lugar tranquilo que refleja la belleza natural y la esencia de la vida comunitaria de la región. ",
       "spots": [
         {
           "name": "Mirador / lugar turístico 1",
           "desc": "Reemplaza este texto con la descripción real del lugar."
         },
         {
-          "name": "Lugar turístico 2",
-          "desc": "Reemplaza este texto con la descripción real del lugar."
+          "name": "chorro Las Golondrinas ",
+          "desc": "Un rincon escondido de Bajo Grande donde la naturaleza cobra vida. Sus aguas cristalinas, rodeadas de exuberante vegetación, crean un ambiente pertfecto para refrescarse, relajarse y conectar con la belleza de Las Lomas "
         },
         {
           "name": "Lugar turístico 3",
           "desc": "Reemplaza este texto con la descripción real del lugar."
         }
       ],
-      "photos": [],
+      "photos": [
+        "/images/uploads/whatsapp-image-2026-09-22-at-1.00.05-pm.jpeg",
+        "/images/uploads/whatsapp-image-2026-09-22-at-12.59.58-pm.jpeg"
+      ],
       "links": [
-        {
-          "label": "Facebook de la comunidad",
-          "url": "#"
-        },
-        {
-          "label": "WhatsApp / contacto local",
-          "url": "#"
-        },
         {
           "label": "Ubicación en Google Maps",
           "url": "#"
