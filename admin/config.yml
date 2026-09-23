@@ -50,6 +50,13 @@ collections:
                 widget: "list"
                 allow_add: true
                 field: { label: "Foto", name: "image", widget: "image" }
+              - label: "Videos"
+                name: "videos"
+                widget: "list"
+                allow_add: true
+                required: false
+                hint: "Sube videos cortos (MP4 recomendado). Pesos muy grandes pueden tardar en subir."
+                field: { label: "Video", name: "video", widget: "file" }
               - label: "Enlaces"
                 name: "links"
                 widget: "list"
