@@ -1,10 +1,10 @@
 {
   "communities": [
     {
-      "id": "loma-bonita",
+      "photos": [
+        "/images/uploads/whatsapp-image-2026-09-22-at-12.03.17-pm.jpeg"
+      ],
       "name": "Loma Bonita",
-      "x": 90.5,
-      "y": 8.4,
       "intro": "Espacio para la descripción de Loma Bonita: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
         {
@@ -16,7 +16,9 @@
           "desc": "Descripción breve pendiente de agregar."
         }
       ],
-      "photos": [],
+      "x": 90.5,
+      "videos": [],
+      "y": 8.4,
       "links": [
         {
           "label": "Facebook de la comunidad",
@@ -27,13 +29,11 @@
           "url": "#"
         }
       ],
-      "videos": []
+      "id": "loma-bonita"
     },
     {
-      "id": "trinidad",
+      "photos": [],
       "name": "Trinidad",
-      "x": 81.9,
-      "y": 26.5,
       "intro": "Espacio para la descripción de Trinidad: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
         {
@@ -45,7 +45,9 @@
           "desc": "Descripción breve pendiente de agregar."
         }
       ],
-      "photos": [],
+      "x": 81.9,
+      "videos": [],
+      "y": 26.5,
       "links": [
         {
           "label": "Facebook de la comunidad",
@@ -56,13 +58,11 @@
           "url": "#"
         }
       ],
-      "videos": []
+      "id": "trinidad"
     },
     {
-      "id": "calabazo",
+      "photos": [],
       "name": "Calabazo",
-      "x": 73.8,
-      "y": 80.5,
       "intro": "Espacio para la descripción de Calabazo: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
         {
@@ -74,7 +74,9 @@
           "desc": "Descripción breve pendiente de agregar."
         }
       ],
-      "photos": [],
+      "x": 73.8,
+      "videos": [],
+      "y": 80.5,
       "links": [
         {
           "label": "Facebook de la comunidad",
@@ -85,13 +87,11 @@
           "url": "#"
         }
       ],
-      "videos": []
+      "id": "calabazo"
     },
     {
-      "id": "ojo-de-agua",
+      "photos": [],
       "name": "Ojo de Agua",
-      "x": 59.7,
-      "y": 68.5,
       "intro": "Espacio para la descripción de Ojo de Agua: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
         {
@@ -103,7 +103,9 @@
           "desc": "Descripción breve pendiente de agregar."
         }
       ],
-      "photos": [],
+      "x": 59.7,
+      "videos": [],
+      "y": 68.5,
       "links": [
         {
           "label": "Facebook de la comunidad",
@@ -114,13 +116,11 @@
           "url": "#"
         }
       ],
-      "videos": []
+      "id": "ojo-de-agua"
     },
     {
-      "id": "bajo-grande",
+      "photos": [],
       "name": "Bajo Grande",
-      "x": 14.9,
-      "y": 54.4,
       "intro": "Bajo Grande es la última parada del recorrido. Este es el espacio de ejemplo: aquí puedes escribir un poco de su historia, cómo llegar, y qué encuentran los visitantes.",
       "spots": [
         {
@@ -136,7 +136,9 @@
           "desc": "Reemplaza este texto con la descripción real del lugar."
         }
       ],
-      "photos": [],
+      "x": 14.9,
+      "videos": [],
+      "y": 54.4,
       "links": [
         {
           "label": "Facebook de la comunidad",
@@ -151,7 +153,7 @@
           "url": "#"
         }
       ],
-      "videos": []
+      "id": "bajo-grande"
     }
   ]
 }
