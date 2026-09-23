@@ -1,149 +1,157 @@
 {
   "communities": [
     {
-      "photos": [
-        "/images/uploads/img_3230.heic",
-        "/images/uploads/img_3226.heic"
-      ],
+      "id": "loma-bonita",
       "name": "Loma Bonita",
-      "intro": "Loma Bonita es una comunidad de Las Lomas, La Pintada, Coclé, rodeada de paisajes montañosos y naturaleza. Su historia se remonta a principios del siglo XX y está vinculada al antiguo Alto de Loma Bonita. Se distingue por sus hermosos paisajes, sus tradiciones y la hospitalidad de sus habitantes.",
+      "x": 50,
+      "y": 11,
+      "intro": "Espacio para la descripción de Loma Bonita: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
         {
-          "name": "Piedra El Caracol",
-          "desc": "La Piedra El Caracol es uno de los atractivos naturales y culturales de Las Lomas. En su superficie se pueden observar figuras talladas en forma de espiral, semejantes a la concha de un caracol, que según la tradición local podrían corresponder a petroglifos realizados por antiguos habitantes de la región. Estas misteriosas marcas convierten la piedra en un lugar de gran interés para quienes desean conocer la historia, las tradiciones y el patrimonio de la comunidad. Rodeada por la naturaleza, La Piedra El Caracol invita a imaginar quiénes realizaron estas figuras y qué significado pudieron tener para nuestros antepasados."
+          "name": "Lugar turístico 1",
+          "desc": "Descripción breve pendiente de agregar."
+        },
+        {
+          "name": "Lugar turístico 2",
+          "desc": "Descripción breve pendiente de agregar."
         }
       ],
-      "x": 90.5,
-      "videos": [],
-      "y": 8.4,
+      "photos": [],
       "links": [
         {
-          "label": "Ubicacion ",
-          "url": "https://maps.google.com/maps?vet=10CAAQoqAOahcKEwi4iui_9YSXAxUAAAAAHQAAAAAQGw..i&fvr=1&pvq=Cg0vZy8xMXFubDQzaGZm&cs=0&um=1&ie=UTF-8&fb=1&gl=pa&sa=X&ftid=0x8fac3bc2d93d484f:0x61d6e906fb71d207"
+          "label": "Facebook de la comunidad",
+          "url": "#"
+        },
+        {
+          "label": "Ubicación en Google Maps",
+          "url": "#"
         }
       ],
-      "id": "loma-bonita"
+      "videos": []
     },
     {
-      "photos": [
-        "/images/uploads/whatsapp-image-2026-09-23-at-9.49.15-am.jpeg",
-        "/images/uploads/whatsapp-image-2026-09-23-at-9.49.08-am.jpeg"
-      ],
+      "id": "trinidad",
       "name": "Trinidad",
-      "intro": "La Trinidad es una comunidad ubicada en el corregimiento de Las Lomas, distrito de La Pintada, Coclé. Su identidad está ligada a la vida rural, sus paisajes naturales y las tradiciones de sus habitantes. Su nombre se relaciona con la celebración de la Santísima Trinidad, una festividad que forma parte de las tradiciones de la comunidad.\nLa hace especial su entorno natural, sus tradiciones y la tranquilidad de una comunidad que conserva el espíritu y la identidad del campo.",
+      "x": 68,
+      "y": 30,
+      "intro": "Espacio para la descripción de Trinidad: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
         {
-          "name": "Agua Fría",
-          "desc": "Agua Fría, ubicada en la comunidad de Trinidad, es un impresionante mirador natural rodeado de montañas, laderas verdes y amplios paisajes que se extienden hasta el horizonte. Desde sus alturas se puede disfrutar de la tranquilidad, el aire fresco y hermosas vistas de los valles y montañas de la región. El recorrido hasta Agua Fría es parte de la aventura: se accede por caminos de montaña que requieren un vehículo 4x4, ideal para quienes buscan combinar naturaleza, paisajes y un poco de adrenalina en una experiencia auténtica de turismo rural"
+          "name": "Lugar turístico 1",
+          "desc": "Descripción breve pendiente de agregar."
+        },
+        {
+          "name": "Lugar turístico 2",
+          "desc": "Descripción breve pendiente de agregar."
         }
       ],
-      "x": 81.9,
-      "videos": [],
-      "y": 26.5,
+      "photos": [],
       "links": [
         {
-          "label": "Ubicación en Google Maps",
-          "url": "https://www.google.com/maps/place/LAS+LOMAS,+AGUA+FRIA,+TRINIDAD/@8.6081215,-80.6226586,17z/data=!4m14!1m7!3m6!1s0x8fac3b00705db6f7:0x749c389bee190ec3!2sLAS+LOMAS,+AGUA+FRIA,+TRINIDAD!8m2!3d8.6081162!4d-80.6200837!16s%2Fg%2F11md_h_ycc!3m5!1s0x8fac3b00705db6f7:0x749c389bee190ec3!8m2!3d8.6081162!4d-80.6200837!16s%2Fg%2F11md_h_ycc?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
-        }
-      ],
-      "id": "trinidad"
-    },
-    {
-      "name": "La Mina ",
-      "intro": "La Mina es paisaje lleno de montañas, extensas llanuras, ríos cristalinos y hermosos atardeceres que reflejan la belleza natural de la comunidad. Un lugar ideal para conectar con la tranquilidad y disfrutar de los paisajes que ofrece la naturaleza.",
-      "x": 60,
-      "y": 76,
-      "spots": [],
-      "photos": [
-        "/images/uploads/whatsapp-image-2026-09-22-at-11.53.33-am.jpeg",
-        "/images/uploads/whatsapp-image-2026-09-22-at-12.04.00-pm.jpeg",
-        "/images/uploads/whatsapp-image-2026-09-22-at-12.04.36-pm.jpeg"
-      ],
-      "links": [
+          "label": "Facebook de la comunidad",
+          "url": "#"
+        },
         {
           "label": "Ubicación en Google Maps",
-          "url": "https://www.google.com/maps/@8.5879247,-80.6105759,16.46z?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
+          "url": "#"
         }
       ],
-      "id": "la-mina"
+      "videos": []
     },
     {
-      "photos": [
-        "/images/uploads/img_3401.heic",
-        "/images/uploads/img_3399.heic",
-        "/images/uploads/img_3394.heic"
-      ],
+      "id": "calabazo",
       "name": "Calabazo",
-      "intro": "Calabazo es un lugar de ambiente rural, rodeado de montañas, naturaleza y paisajes que conservan la esencia del campo coclesano.\nSu historia está ligada al crecimiento de las familias y actividades del campo que, con el paso de los años, fueron dando forma a la comunidad. Hoy, Calabazo destaca por su tranquilidad, sus paisajes naturales y el contacto cercano con la vida rural, convirtiéndolo en un punto con potencial para disfrutar y conocer la riqueza natural y cultural de Las Lomas.",
-      "spots": [],
-      "x": 73.8,
-      "videos": [],
-      "y": 80.5,
-      "links": [
+      "x": 47,
+      "y": 51,
+      "intro": "Espacio para la descripción de Calabazo: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
+      "spots": [
         {
-          "label": "Ubicación en Google Maps",
-          "url": "https://www.google.com/maps/place/Calabazo%231/@8.5957375,-80.636709,15.61z/data=!4m6!3m5!1s0x8fac3b000f7cd4f7:0xf09e84a7ed1a3936!8m2!3d8.5959799!4d-80.6302537!16s%2Fg%2F11wtt452sy?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
+          "name": "Lugar turístico 1",
+          "desc": "Descripción breve pendiente de agregar."
+        },
+        {
+          "name": "Lugar turístico 2",
+          "desc": "Descripción breve pendiente de agregar."
         }
       ],
-      "id": "calabazo"
+      "photos": [],
+      "links": [
+        {
+          "label": "Facebook de la comunidad",
+          "url": "#"
+        },
+        {
+          "label": "Ubicación en Google Maps",
+          "url": "#"
+        }
+      ],
+      "videos": []
     },
     {
-      "photos": [
-        "/images/uploads/whatsapp-image-2026-09-22-at-1.11.39-pm.jpeg",
-        "/images/uploads/whatsapp-image-2026-09-22-at-1.11.44-pm.jpeg"
-      ],
+      "id": "ojo-de-agua",
       "name": "Ojo de Agua",
-      "intro": "Ojo de Agua es un lugar donde la naturaleza cobra vida entre nacimientos de agua, paisajes verdes y la tranquilidad del campo. Su nombre hace referencia a las fuentes naturales que han acompañado a la comunidad a lo largo del tiempo. Es un espacio ideal para disfrutar del paisaje, conocer la vida rural y descubrir la belleza natural de Las Lomas",
+      "x": 65,
+      "y": 72,
+      "intro": "Espacio para la descripción de Ojo de Agua: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
         {
-          "name": "Chorro Grande",
-          "desc": "El Chorro Grande de Ojo de Agua es un hermoso atractivo natural rodeado de vegetación y tranquilidad. Sus aguas cristalinas caen entre las rocas formando un espacio refrescante, ideal para disfrutar de un baño, conectar con la naturaleza y vivir una experiencia auténtica en el corazón de la comunidad."
+          "name": "Lugar turístico 1",
+          "desc": "Descripción breve pendiente de agregar."
+        },
+        {
+          "name": "Lugar turístico 2",
+          "desc": "Descripción breve pendiente de agregar."
         }
       ],
-      "x": 59.7,
-      "videos": [],
-      "y": 68.5,
+      "photos": [],
       "links": [
         {
+          "label": "Facebook de la comunidad",
+          "url": "#"
+        },
+        {
           "label": "Ubicación en Google Maps",
-          "url": "https://www.google.com/maps/place/Ojo+De+Agua,+Provincia+de+Cocl%C3%A9/@8.5951669,-80.65615,14z/data=!3m1!4b1!4m6!3m5!1s0x8fac24d421bd689f:0x75068cfb4b0d7e71!8m2!3d8.592535!4d-80.6354665!16s%2Fg%2F1hjgh4jwz?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
+          "url": "#"
         }
       ],
-      "id": "ojo-de-agua"
+      "videos": []
     },
     {
-      "photos": [
-        "/images/uploads/whatsapp-image-2026-09-23-at-10.14.00-am.jpeg",
-        "/images/uploads/whatsapp-image-2026-09-23-at-10.14.30-am.jpeg",
-        "/images/uploads/whatsapp-image-2026-09-23-at-10.11.43-am.jpeg",
-        "/images/uploads/whatsapp-image-2026-09-22-at-1.00.05-pm.jpeg"
-      ],
+      "id": "bajo-grande",
       "name": "Bajo Grande",
-      "intro": "Bajo Grande es una comunidad ubicada en la parte final del corregimiento de Las Lomas, La Pintada. Su historia está ligada al desarrollo de las familias campesinas que fueron formando la comunidad con el paso del tiempo. Rodeada de montañas, vegetación y paisajes naturales, destaca por su tranquilidad y por sus diferentes tipos de atractivos. Hoy conserva sus tradiciones, su vida rural y sus paisajes naturales, que forman parte de la identidad de sus habitantes. ",
+      "x": 50,
+      "y": 91,
+      "intro": "Bajo Grande es la última parada del recorrido. Este es el espacio de ejemplo: aquí puedes escribir un poco de su historia, cómo llegar, y qué encuentran los visitantes.",
       "spots": [
         {
-          "name": " Cerro Peñas Prietas ",
-          "desc": "Cerro Peñas Prietas es un atractivo natural de Las Lomas que invita a descubrir la belleza de sus montañas y paisajes rurales. Su entorno de vegetación, rocas y elevaciones naturales ofrece una experiencia ideal para quienes disfrutan del senderismo, la aventura y el contacto con la naturaleza. Desde sus alrededores se puede apreciar la tranquilidad del campo y disfrutar de hermosos paisajes que hacen de Peñas Prietas un lugar especial para explorar y conocer la riqueza natural de la región"
+          "name": "Mirador / lugar turístico 1",
+          "desc": "Reemplaza este texto con la descripción real del lugar."
         },
         {
-          "name": "Rio El Remolino",
-          "desc": "Descubre la belleza natural del Río El Remolino, uno de los lugares favoritos de la comunidad para disfrutar de un refrescante encuentro con la naturaleza. Sus aguas frescas, rodeadas de exuberante vegetación y paisajes llenos de vida, crean el escenario perfecto para bañarse, relajarse y compartir momentos inolvidables en familia o con amigos. Una joya natural de Las Lomas que invita a disfrutar, explorar y conectar con la esencia de nuestra tierra"
+          "name": "Lugar turístico 2",
+          "desc": "Reemplaza este texto con la descripción real del lugar."
         },
         {
-          "name": "Chorro Las Golondrinas",
-          "desc": "El Chorro Las Golondrinas, ubicado en la comunidad de Bajo Grande, Las Lomas, es un hermoso atractivo natural rodeado de vegetación y tranquilidad. Sus aguas cristalinas forman un refrescante rincón ideal para disfrutar de la naturaleza, darse un baño y compartir en familia. Un lugar especial donde el sonido del agua y el paisaje hacen de la visita una experiencia auténtica del campo coclesano"
+          "name": "Lugar turístico 3",
+          "desc": "Reemplaza este texto con la descripción real del lugar."
         }
       ],
-      "x": 14.9,
-      "videos": [],
-      "y": 54.4,
+      "photos": [],
       "links": [
         {
+          "label": "Facebook de la comunidad",
+          "url": "#"
+        },
+        {
+          "label": "WhatsApp / contacto local",
+          "url": "#"
+        },
+        {
           "label": "Ubicación en Google Maps",
-          "url": "https://www.google.com/maps/place/Bajo+Grande,+Provincia+de+Cocl%C3%A9/@8.5884867,-80.6970909,14z/data=!3m1!4b1!4m6!3m5!1s0x8fac25007b6191d5:0xc5a1f1ab8cbe4185!8m2!3d8.588445!4d-80.676491!16s%2Fg%2F1tl1jz15?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
+          "url": "#"
         }
       ],
-      "id": "bajo-grande"
+      "videos": []
     }
   ]
 }
