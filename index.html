@@ -64,20 +64,11 @@
   html,body{height:100%;}
   body{
     margin:0;
-    background:
-      linear-gradient(180deg, color-mix(in srgb, var(--bg) 88%, transparent) 0%, var(--bg) 40%, var(--bg) 100%),
-      url('images/fondo-satelital.jpg');
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+    background:var(--bg);
     color:var(--ink);
     font-family:'Karla', sans-serif;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
-  }
-  @media (min-width:900px){
-    body{ background-attachment: fixed; }
   }
   header{
     padding: calc(2.4rem + env(safe-area-inset-top,0px)) 1.5rem 1.4rem;
@@ -97,49 +88,20 @@
     max-width:32em;
     margin-inline:auto;
   }
-  .map-scroll{
-    max-width: 100%;
-    overflow-x:auto;
-    padding: 0.5rem 1rem 3rem;
-    -webkit-overflow-scrolling:touch;
-  }
-  .map-visual{
+  .map-wrap{
     position:relative;
-    min-width: 900px;
-    max-width: 1400px;
-    margin: 0 auto;
-    aspect-ratio: 2405 / 400;
-    border-radius:18px;
-    overflow:hidden;
+    max-width:640px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+  }
+  .map-wrap.has-photo svg.trail-bg{
+    border-radius:16px;
     box-shadow: var(--shadow);
   }
-  .map-photo{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
+  svg.trail-bg{
     display:block;
-  }
-  .map-scrim{
-    position:absolute;
-    inset:0;
-    background: linear-gradient(180deg, rgba(20,16,10,0.12), rgba(20,16,10,0.28));
-  }
-  svg.trail-overlay{
-    position:absolute;
-    inset:0;
     width:100%;
-    height:100%;
-  }
-  .scroll-hint{
-    text-align:center;
-    font-size:0.78rem;
-    color:var(--ink-soft);
-    margin: -1.6rem 0 0.6rem;
-  }
-  @media (min-width:1000px){
-    .scroll-hint{ display:none; }
+    height:auto;
   }
   .pin-layer{
     position:absolute;
@@ -332,17 +294,26 @@
   <p>Toca cada punto del camino para conocer los lugares turísticos, fotos y enlaces de cada comunidad, desde Loma Bonita hasta Bajo Grande.</p>
 </header>
 
-<p class="scroll-hint">↔ Desliza para ver todo el recorrido</p>
-<div class="map-scroll">
-  <div class="map-visual" id="mapVisual">
-    <img class="map-photo" id="bgPhoto" src="images/fondo-satelital.jpg" alt="Vista satelital del corregimiento Las Lomas">
-    <div class="map-scrim"></div>
-    <svg class="trail-overlay" viewBox="0 0 2405 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M359,218 C539,227 1201,257 1437,274 C1673,291 1687,350 1776,322 C1865,294 1903,154 1970,106 C2037,58 2143,46 2177,34"
-            fill="none" stroke="var(--trail)" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 20" vector-effect="non-scaling-stroke"/>
-    </svg>
-    <div class="pin-layer" id="pinLayer"></div>
-  </div>
+<div class="map-wrap" id="mapWrap">
+  <svg class="trail-bg" viewBox="0 0 400 620" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="0" y="0" width="400" height="620" fill="none"/>
+    <!-- foto de fondo (solo aparece si la subes desde el editor /admin) -->
+    <image id="bgPhoto" x="0" y="0" width="400" height="620" preserveAspectRatio="xMidYMid slice" href="" style="display:none;"/>
+    <!-- lomas ilustradas (se ocultan si subes una foto) -->
+    <g id="hillsGroup">
+      <path d="M-10,90 Q80,40 180,85 T410,70 V0 H-10 Z" fill="var(--hill-1)" opacity="0.55"/>
+      <path d="M-10,220 Q100,160 200,215 T410,195 V90 Q300,60 200,110 T-10,120 Z" fill="var(--hill-2)" opacity="0.5"/>
+      <path d="M-10,620 V330 Q90,280 190,335 T410,320 V620 Z" fill="var(--hill-3)" opacity="0.45"/>
+      <path d="M-10,620 V430 Q120,390 210,440 T410,430 V620 Z" fill="var(--hill-2)" opacity="0.6"/>
+    </g>
+    <!-- capa oscura para legibilidad si hay foto -->
+    <rect id="photoScrim" x="0" y="0" width="400" height="620" fill="#1a1208" opacity="0" />
+    <!-- camino -->
+    <path d="M200,68 C212,88 274,145 272,186 C270,227 190,273 188,316 C186,360 258,405 260,446 C262,488 210,545 200,564"
+          fill="none" stroke="var(--trail)" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 16"/>
+  </svg>
+
+  <div class="pin-layer" id="pinLayer"></div>
 </div>
 
 <div class="overlay" id="overlay">
@@ -464,11 +435,16 @@ fetch('content/communities.json')
 fetch('content/settings.json')
   .then(r => r.json())
   .then(settings => {
-    if (settings.background_image) {
-      document.getElementById('bgPhoto').src = settings.background_image;
+    const bg = settings.background_image;
+    if (bg) {
+      document.getElementById('bgPhoto').setAttribute('href', bg);
+      document.getElementById('bgPhoto').style.display = 'block';
+      document.getElementById('hillsGroup').style.display = 'none';
+      document.getElementById('photoScrim').setAttribute('opacity', '0.18');
+      document.getElementById('mapWrap').classList.add('has-photo');
     }
   })
-  .catch(() => { /* si no existe el archivo, se queda con la foto satelital por defecto */ });
+  .catch(() => { /* si no existe el archivo, se queda con el diseño ilustrado */ });
 
 pinLayer.addEventListener('click', (e) => {
   const btn = e.target.closest('.pin');
