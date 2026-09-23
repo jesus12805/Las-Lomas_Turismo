@@ -65,7 +65,27 @@
           "url": "https://www.google.com/maps/@8.5879247,-80.6105759,16.46z?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
         }
       ],
-      "id": "La-mina"
+      "id": "la-mina"
+    },
+    {
+      "photos": [
+        "/images/uploads/img_3401.heic",
+        "/images/uploads/img_3399.heic",
+        "/images/uploads/img_3394.heic"
+      ],
+      "name": "Calabazo",
+      "intro": "Calabazo es un lugar de ambiente rural, rodeado de montañas, naturaleza y paisajes que conservan la esencia del campo coclesano.\nSu historia está ligada al crecimiento de las familias y actividades del campo que, con el paso de los años, fueron dando forma a la comunidad. Hoy, Calabazo destaca por su tranquilidad, sus paisajes naturales y el contacto cercano con la vida rural, convirtiéndolo en un punto con potencial para disfrutar y conocer la riqueza natural y cultural de Las Lomas.",
+      "spots": [],
+      "x": 73.8,
+      "videos": [],
+      "y": 80.5,
+      "links": [
+        {
+          "label": "Ubicación en Google Maps",
+          "url": "https://www.google.com/maps/place/Calabazo%231/@8.5957375,-80.636709,15.61z/data=!4m6!3m5!1s0x8fac3b000f7cd4f7:0xf09e84a7ed1a3936!8m2!3d8.5959799!4d-80.6302537!16s%2Fg%2F11wtt452sy?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "id": "calabazo"
     },
     {
       "photos": [
@@ -90,26 +110,6 @@
         }
       ],
       "id": "ojo-de-agua"
-    },
-    {
-      "photos": [
-        "/images/uploads/img_3401.heic",
-        "/images/uploads/img_3399.heic",
-        "/images/uploads/img_3394.heic"
-      ],
-      "name": "Calabazo",
-      "intro": "Calabazo es un lugar de ambiente rural, rodeado de montañas, naturaleza y paisajes que conservan la esencia del campo coclesano.\nSu historia está ligada al crecimiento de las familias y actividades del campo que, con el paso de los años, fueron dando forma a la comunidad. Hoy, Calabazo destaca por su tranquilidad, sus paisajes naturales y el contacto cercano con la vida rural, convirtiéndolo en un punto con potencial para disfrutar y conocer la riqueza natural y cultural de Las Lomas.",
-      "spots": [],
-      "x": 73.8,
-      "videos": [],
-      "y": 80.5,
-      "links": [
-        {
-          "label": "Ubicación en Google Maps",
-          "url": "https://www.google.com/maps/place/Calabazo%231/@8.5957375,-80.636709,15.61z/data=!4m6!3m5!1s0x8fac3b000f7cd4f7:0xf09e84a7ed1a3936!8m2!3d8.5959799!4d-80.6302537!16s%2Fg%2F11wtt452sy?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
-        }
-      ],
-      "id": "calabazo"
     },
     {
       "photos": [
