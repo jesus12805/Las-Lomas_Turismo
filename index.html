@@ -265,6 +265,67 @@
     background:#000;
     max-height:260px;
   }
+
+  /* Lightbox */
+  .lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(10,8,5,0.92);
+    z-index:40;
+    display:none;
+    align-items:center;
+    justify-content:center;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox-img{
+    max-width:88vw;
+    max-height:82vh;
+    object-fit:contain;
+    border-radius:6px;
+  }
+  .lightbox-close{
+    position:absolute;
+    top: calc(1rem + env(safe-area-inset-top,0px));
+    right:1.2rem;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:2.2rem;
+    line-height:1;
+    cursor:pointer;
+    padding:0.2rem 0.5rem;
+  }
+  .lightbox-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(255,255,255,0.12);
+    border:none;
+    color:#fff;
+    font-size:2.4rem;
+    line-height:1;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .lightbox-nav:hover{ background:rgba(255,255,255,0.25); }
+  .lightbox-prev{ left:1rem; }
+  .lightbox-next{ right:1rem; }
+  .lightbox-counter{
+    position:absolute;
+    bottom: calc(1.2rem + env(safe-area-inset-bottom,0px));
+    left:50%;
+    transform:translateX(-50%);
+    color:#fff;
+    font-size:0.85rem;
+    background:rgba(255,255,255,0.12);
+    padding:0.25rem 0.8rem;
+    border-radius:999px;
+  }
   .link-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.5rem; }
   .link-list a{
     display:flex;
@@ -349,6 +410,14 @@
   </div>
 </div>
 
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">×</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Foto anterior">‹</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Foto siguiente">›</button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
 <script>
 /* =========================================================================
    Los datos de cada comunidad ahora viven en content/communities.json
@@ -372,19 +441,51 @@ function renderPins(){
   `).join('');
 }
 
+let currentPhotos = [];
+let currentPhotoIndex = 0;
+
 function renderGallery(photos){
   const list = photos || [];
   const minSlots = 3;
-  let html = list.map(src => `
-    <a class="photo-slot photo-real" href="${src}" target="_blank" rel="noopener" style="border:none;padding:0;overflow:hidden;">
+  let html = list.map((src, i) => `
+    <button type="button" class="photo-slot photo-real" style="border:none;padding:0;overflow:hidden;" data-index="${i}" aria-label="Ver foto ${i+1} en grande">
       <img src="${src}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
-    </a>`
+    </button>`
   ).join('');
   for(let i = list.length; i < minSlots; i++){
     html += `<div class="photo-slot">${cameraIcon}<span>Foto ${i+1}<br>pendiente</span></div>`;
   }
   return html;
 }
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCounter = document.getElementById('lightboxCounter');
+
+function openLightbox(index){
+  if (!currentPhotos.length) return;
+  currentPhotoIndex = (index + currentPhotos.length) % currentPhotos.length;
+  lightboxImg.src = currentPhotos[currentPhotoIndex];
+  lightboxCounter.textContent = `${currentPhotoIndex + 1} / ${currentPhotos.length}`;
+  lightbox.classList.add('open');
+}
+function closeLightbox(){ lightbox.classList.remove('open'); }
+
+document.getElementById('panelGallery').addEventListener('click', (e) => {
+  const btn = e.target.closest('.photo-real');
+  if(!btn) return;
+  openLightbox(parseInt(btn.dataset.index, 10));
+});
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+document.getElementById('lightboxPrev').addEventListener('click', () => openLightbox(currentPhotoIndex - 1));
+document.getElementById('lightboxNext').addEventListener('click', () => openLightbox(currentPhotoIndex + 1));
+lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') openLightbox(currentPhotoIndex - 1);
+  if (e.key === 'ArrowRight') openLightbox(currentPhotoIndex + 1);
+});
 
 function renderVideos(videos){
   const list = videos || [];
@@ -400,6 +501,7 @@ function openPanel(community){
   ).join('');
   document.getElementById('panelGallery').innerHTML = renderGallery(community.photos);
   document.getElementById('panelGallery').style.gridTemplateColumns = 'repeat(3, 1fr)';
+  currentPhotos = community.photos || [];
 
   const videoSection = document.getElementById('panelVideoSection');
   if (community.videos && community.videos.length > 0) {
