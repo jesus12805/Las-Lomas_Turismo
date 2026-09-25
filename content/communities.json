@@ -2,35 +2,6 @@
   "communities": [
     {
       "photos": [],
-      "name": "Loma Bonita",
-      "intro": "Espacio para la descripción de Loma Bonita: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
-      "spots": [
-        {
-          "name": "Lugar turístico 1",
-          "desc": "Descripción breve pendiente de agregar."
-        },
-        {
-          "name": "Lugar turístico 2",
-          "desc": "Descripción breve pendiente de agregar."
-        }
-      ],
-      "x": 50,
-      "videos": [],
-      "y": 13,
-      "links": [
-        {
-          "label": "Facebook de la comunidad",
-          "url": "#"
-        },
-        {
-          "label": "Ubicación en Google Maps",
-          "url": "#"
-        }
-      ],
-      "id": "loma-bonita"
-    },
-    {
-      "photos": [],
       "name": "Trinidad",
       "intro": "Espacio para la descripción de Trinidad: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
@@ -59,7 +30,9 @@
       "id": "trinidad"
     },
     {
-      "photos": [],
+      "photos": [
+        null
+      ],
       "name": "Calabazo",
       "intro": "Espacio para la descripción de Calabazo: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
       "spots": [
@@ -117,7 +90,9 @@
       "id": "ojo-de-agua"
     },
     {
-      "photos": [],
+      "photos": [
+        "/images/uploads/whatsapp-image-2026-09-22-at-1.00.05-pm.jpeg"
+      ],
       "name": "Bajo Grande",
       "intro": "Bajo Grande es la última parada del recorrido. Este es el espacio de ejemplo: aquí puedes escribir un poco de su historia, cómo llegar, y qué encuentran los visitantes.",
       "spots": [
