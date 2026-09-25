@@ -1,17 +1,40 @@
 {
   "communities": [
     {
-      "photos": [],
-      "name": "Trinidad",
-      "intro": "Espacio para la descripción de Trinidad: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
+      "photos": [
+        "/images/uploads/1000529182.jpg",
+        "/images/uploads/1000529186.jpg"
+      ],
+      "name": "Loma Bonita",
+      "intro": "Loma Bonita es una comunidad de Las Lomas, La Pintada, Coclé, rodeada de paisajes montañosos y naturaleza. Su historia se remonta a principios del siglo XX y está vinculada al antiguo Alto de Loma Bonita. Se distingue por sus hermosos paisajes, sus tradiciones y la hospitalidad de sus habitantes.",
       "spots": [
         {
-          "name": "Lugar turístico 1",
-          "desc": "Descripción breve pendiente de agregar."
-        },
+          "name": "Piedra El Caracol ",
+          "desc": "La Piedra El Caracol es uno de los atractivos naturales y culturales de Las Lomas. En su superficie se pueden observar figuras talladas en forma de espiral, semejantes a la concha de un caracol, que según la tradición local podrían corresponder a petroglifos realizados por antiguos habitantes de la región. Estas misteriosas marcas convierten la piedra en un lugar de gran interés para quienes desean conocer la historia, las tradiciones y el patrimonio de la comunidad. Rodeada por la naturaleza, La Piedra El Caracol invita a imaginar quiénes realizaron estas figuras y qué significado pudieron tener para nuestros antepasados."
+        }
+      ],
+      "x": 50,
+      "videos": [],
+      "y": 13,
+      "links": [
         {
-          "name": "Lugar turístico 2",
-          "desc": "Descripción breve pendiente de agregar."
+          "label": "Ubicación en Google Maps",
+          "url": "https://www.google.com/maps/search/?api=1&query=Loma+Bonita%2C+Las+Lomas%2C+La+Pintada%2C+Cocl%C3%A9%2C+Panam%C3%A1⁠�"
+        }
+      ],
+      "id": "loma-bonita"
+    },
+    {
+      "photos": [
+        "/images/uploads/whatsapp-image-2026-09-23-at-9.49.08-am.jpeg",
+        "/images/uploads/whatsapp-image-2026-09-23-at-9.49.15-am.jpeg"
+      ],
+      "name": "Trinidad",
+      "intro": "La Trinidad es una comunidad ubicada en el corregimiento de Las Lomas, distrito de La Pintada, Coclé. Su identidad está ligada a la vida rural, sus paisajes naturales y las tradiciones de sus habitantes. Su nombre se relaciona con la celebración de la Santísima Trinidad, una festividad que forma parte de las tradiciones de la comunidad.\n Lo que la hace especial: su entorno natural, sus tradiciones y la tranquilidad de una comunidad que conserva el espíritu y la identidad del campo.",
+      "spots": [
+        {
+          "name": "Agua Fría ",
+          "desc": "Agua Fría, ubicada en la comunidad de Trinidad, es un impresionante mirador natural rodeado de montañas, laderas verdes y amplios paisajes que se extienden hasta el horizonte. Desde sus alturas se puede disfrutar de la tranquilidad, el aire fresco y hermosas vistas de los valles y montañas de la región. El recorrido hasta Agua Fría es parte de la aventura: se accede por caminos de montaña que requieren un vehículo 4x4, ideal para quienes buscan combinar naturaleza, paisajes y un poco de adrenalina en una experiencia auténtica de turismo rural."
         }
       ],
       "x": 68,
@@ -19,59 +42,44 @@
       "y": 30,
       "links": [
         {
-          "label": "Facebook de la comunidad",
-          "url": "#"
-        },
-        {
           "label": "Ubicación en Google Maps",
-          "url": "#"
+          "url": "https://www.google.com/maps/search/?api=1&query=La+Trinidad%2C+Las+Lomas%2C+La+Pintada%2C+Cocl%C3%A9%2C+Panam%C3%A1⁠�"
         }
       ],
       "id": "trinidad"
     },
     {
       "photos": [
-        null
+        "/images/uploads/1000529309.jpg",
+        "/images/uploads/1000529302.jpg",
+        "/images/uploads/1000529295.jpg",
+        "/images/uploads/1000529228.jpg"
       ],
       "name": "Calabazo",
-      "intro": "Espacio para la descripción de Calabazo: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
-      "spots": [
-        {
-          "name": "Lugar turístico 1",
-          "desc": "Descripción breve pendiente de agregar."
-        },
-        {
-          "name": "Lugar turístico 2",
-          "desc": "Descripción breve pendiente de agregar."
-        }
-      ],
+      "intro": "Calabazo es una de las comunidades que forman parte del corregimiento de Las Lomas, en La Pintada, Coclé. Es un lugar de ambiente rural, rodeado de montañas, naturaleza y paisajes que conservan la esencia del campo coclesano.\nSu historia está ligada al crecimiento de las familias y actividades del campo que, con el paso de los años, fueron dando forma a la comunidad. Hoy, Calabazo destaca por su tranquilidad, sus paisajes naturales y el contacto cercano con la vida rural, convirtiéndolo en un punto con potencial para disfrutar y conocer la riqueza natural y cultural de Las Lomas.",
+      "spots": [],
       "x": 47,
       "videos": [],
       "y": 51,
       "links": [
         {
-          "label": "Facebook de la comunidad",
-          "url": "#"
-        },
-        {
           "label": "Ubicación en Google Maps",
-          "url": "#"
+          "url": "https://www.google.com/maps/search/?api=1&query=Calabazo%2C+Las+Lomas%2C+La+Pintada%2C+Cocl%C3%A9%2C+Panam%C3%A1⁠�"
         }
       ],
       "id": "calabazo"
     },
     {
-      "photos": [],
+      "photos": [
+        "/images/uploads/whatsapp-image-2026-09-22-at-1.11.39-pm.jpeg",
+        "/images/uploads/whatsapp-image-2026-09-22-at-1.11.44-pm.jpeg"
+      ],
       "name": "Ojo de Agua",
-      "intro": "Espacio para la descripción de Ojo de Agua: su historia, ubicación dentro del corregimiento y lo que la hace especial.",
+      "intro": "Ojo de Agua es un lugar donde la naturaleza cobra vida entre nacimientos de agua, paisajes verdes y la tranquilidad del campo. Su nombre hace referencia a las fuentes naturales que han acompañado a la comunidad a lo largo del tiempo. Es un espacio ideal para disfrutar del paisaje, conocer la vida rural y descubrir la belleza natural de Las Lomas",
       "spots": [
         {
-          "name": "Lugar turístico 1",
-          "desc": "Descripción breve pendiente de agregar."
-        },
-        {
-          "name": "Lugar turístico 2",
-          "desc": "Descripción breve pendiente de agregar."
+          "name": "Chorro Grande ",
+          "desc": "El Chorro Grande de Ojo de Agua es un hermoso atractivo natural rodeado de vegetación y tranquilidad. Sus aguas cristalinas caen entre las rocas formando un espacio refrescante, ideal para disfrutar de un baño, conectar con la naturaleza y vivir una experiencia auténtica en el corazón de la comunidad."
         }
       ],
       "x": 65,
@@ -79,34 +87,33 @@
       "y": 72,
       "links": [
         {
-          "label": "Facebook de la comunidad",
-          "url": "#"
-        },
-        {
           "label": "Ubicación en Google Maps",
-          "url": "#"
+          "url": "https://www.google.com/maps/search/?api=1&query=Ojo+de+Agua%2C+Las+Lomas%2C+La+Pintada%2C+Cocl%C3%A9%2C+Panam%C3%A1⁠�"
         }
       ],
       "id": "ojo-de-agua"
     },
     {
       "photos": [
-        "/images/uploads/whatsapp-image-2026-09-22-at-1.00.05-pm.jpeg"
+        "/images/uploads/whatsapp-image-2026-09-23-at-10.14.00-am.jpeg",
+        "/images/uploads/whatsapp-image-2026-09-23-at-10.11.43-am.jpeg",
+        "/images/uploads/whatsapp-image-2026-09-23-at-10.11.43-am.jpeg",
+        "/images/uploads/1000527562.jpg"
       ],
       "name": "Bajo Grande",
-      "intro": "Bajo Grande es la última parada del recorrido. Este es el espacio de ejemplo: aquí puedes escribir un poco de su historia, cómo llegar, y qué encuentran los visitantes.",
+      "intro": "Bajo Grande surgió con el asentamiento de familias campesinas que se establecieron en esta zona y desarrollaron actividades agrícolas y ganaderas. Con el crecimiento de la población, la comunidad fue consolidándose como parte del corregimiento de Las Lomas. Hoy conserva sus tradiciones, su vida rural y sus paisajes naturales, que forman parte de la identidad de sus habitantes. ",
       "spots": [
         {
-          "name": "Mirador / lugar turístico 1",
-          "desc": "Reemplaza este texto con la descripción real del lugar."
+          "name": "Cerro Peñas Prietas ",
+          "desc": "Cerro Peñas Prietas es un atractivo natural de Las Lomas que invita a descubrir la belleza de sus montañas y paisajes rurales. Su entorno de vegetación, rocas y elevaciones naturales ofrece una experiencia ideal para quienes disfrutan del senderismo, la aventura y el contacto con la naturaleza. Desde sus alrededores se puede apreciar la tranquilidad del campo y disfrutar de hermosos paisajes que hacen de Peñas Prietas un lugar especial para explorar y conocer la riqueza natural de la región."
         },
         {
-          "name": "Lugar turístico 2",
-          "desc": "Reemplaza este texto con la descripción real del lugar."
+          "name": "Río El Remolino ",
+          "desc": "Descubre la belleza natural del Río El Remolino, uno de los lugares favoritos de la comunidad para disfrutar de un refrescante encuentro con la naturaleza. Sus aguas frescas, rodeadas de exuberante vegetación y paisajes llenos de vida, crean el escenario perfecto para bañarse, relajarse y compartir momentos inolvidables en familia o con amigos. Una joya natural de Las Lomas que invita a disfrutar, explorar y conectar con la esencia de nuestra tierra."
         },
         {
-          "name": "Lugar turístico 3",
-          "desc": "Reemplaza este texto con la descripción real del lugar."
+          "name": "Chorro Las Golondrinas ",
+          "desc": "El Chorro Las Golondrinas, ubicado en la comunidad de Bajo Grande, Las Lomas, es un hermoso atractivo natural rodeado de vegetación y tranquilidad. Sus aguas cristalinas forman un refrescante rincón ideal para disfrutar de la naturaleza, darse un baño y compartir en familia. Un lugar especial donde el sonido del agua y el paisaje hacen de la visita una experiencia auténtica del campo coclesano."
         }
       ],
       "x": 50,
@@ -114,16 +121,8 @@
       "y": 91,
       "links": [
         {
-          "label": "Facebook de la comunidad",
-          "url": "#"
-        },
-        {
-          "label": "WhatsApp / contacto local",
-          "url": "#"
-        },
-        {
           "label": "Ubicación en Google Maps",
-          "url": "#"
+          "url": "https://www.google.com/maps/search/?api=1&query=Bajo+Grande%2C+Las+Lomas%2C+La+Pintada%2C+Cocl%C3%A9%2C+Panam%C3%A1⁠�"
         }
       ],
       "id": "bajo-grande"
